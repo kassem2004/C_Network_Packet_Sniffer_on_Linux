@@ -5,6 +5,3 @@ Observation:
 2. After adding the IP, TCp and UDP headers, I realized that these packets are all just loopback packets using 127.0.0.1 IP address, which now makes sense of the fact that the Ethernet headers always started with 00 00 00...00 00 00. I believe this is once again due to WSL's limitations.
 
 3. Also, when I went to use tcphdr, for some reason it was giving me an error, which I tried looking up but got nothing for, and I also think this is due to the WSL limitations, so I ended up making my own TCP Header Struct.
-   
-Conclusion:
-1. I will complete this sniffer using raw sockets, but will then create another file which will use Wireshark packet capture, and then analyze the .pcap file in c.
